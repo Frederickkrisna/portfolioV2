@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import Image from 'next/image'
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -36,7 +37,13 @@ export default function About() {
             >
               <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8">
                 <div className="bg-gray-300 h-80 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-500">Your Photo</span>
+                  <Image
+                    src="/frederick.jpg"
+                    alt="profile picture"
+                    width={320}
+                    height={320}
+                    className="object-cover rounded-md h-80 w-80"
+                  />
                 </div>
               </div>
               
